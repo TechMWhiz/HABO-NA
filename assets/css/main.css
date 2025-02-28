@@ -1529,7 +1529,7 @@ section,
 
 .gallery-sports .gallery-item img {
   width: 300px; 
-  height: 500px; 
+  height: 300px; 
   object-fit: cover;
   transition: 0.3s;
 }
