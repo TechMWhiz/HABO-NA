@@ -86,8 +86,93 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Gallery Travel</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <h1>Gallery People</h1>
+             
+    <style>
+      .slider {
+          position: relative;
+          max-width: 600px;
+          margin: auto;
+          overflow: hidden;
+      }
+
+      .slides {
+          display: flex;
+          width: 100%; /* Adjusted for 6 images */
+          animation: slide 6s infinite; /* Adjusted for 6 images */
+      }
+
+      .slide {
+          min-width: 100%;
+          box-sizing: border-box;
+      }
+
+      img {
+          width: 100%;
+          height: 650px; /* Set the desired height */
+          object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+          display: block;
+      }
+
+      @keyframes slide {
+          0% { transform: translateX(0%); }
+          16.67% { transform: translateX(-100%); }
+          33.34% { transform: translateX(-200%); }
+          50.01% { transform: translateX(-300%); }
+          66.68% { transform: translateX(-400%); }
+          83.35% { transform: translateX(-500%); }
+          83.36%, 100% { transform: translateX(-500%); }
+      }
+
+      .final-display {
+          display: none;
+          animation: displayAll 0s forwards 6s; /* Adjusted for 6 images */
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-gap: 10px;
+          margin-top: 20px;
+      }
+
+      .final-display img {
+          width: 100px; /* Set the desired width for smaller images */
+          height: 100px; /* Set the desired height for smaller images */
+          object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+      }
+
+      @keyframes displayAll {
+          0% { display: block; }
+      }
+  </style>
+        </head>
+        <body>
+          <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="HABO-NA\assets\img\gallery-people\people5.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="HABO-NA\assets\img\gallery-people\people6.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="HABO-NA\assets\img\gallery-people\people7.jpg" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="HABO-NA\assets\img\gallery-people\people8.jpg" alt="Image 4">
+                </div>
+                <div class="slide">
+                    <img src="HABO-NA\assets\img\gallery-people\people12.jpg" alt="Image 5">
+                </div>
+                <div class="slide">
+                    <img src="HABO-NA/assets/img/gallery-people/people13.jpg" alt="Image 6">
+                </div>
+            </div>
+        </div>
+
+              
+          </div>
+          <div>
+              <p class="mb-0"><font Face= "Courier New" >Welcome to the "People" section , where we celebrate the beauty, diversity, and complexity of human life through the lens of our talented photographers. Each portrait tells a unique story, capturing moments of joy, introspection, strength, and vulnerability.</font></p>
               <a href="contact.html" class="cta-btn">Available for Hire<br></a>
             </div>
           </div>
@@ -104,7 +189,7 @@
     </div><!-- End Page Title -->
 
     <!-- Gallery Section -->
-    <section id="gallery-people" class="gallery-people section">
+    <section id="gallery-nature" class="gallery-nature section">
 
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
 
@@ -112,9 +197,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-15.jpg" class="img-fluid" alt="">
+              <img src="HABO-NA\assets\img\gallery-people\people1.jpg" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-15.jpg" title="Gallery 15" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="HABO-NA\assets\img\gallery-people\people1.jpg" title="people1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
@@ -122,9 +207,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-16.jpg" class="img-fluid" alt="">
+              <img src="HABO-NA/assets/img/gallery-people/people2.jpg" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-16.jpg" title="Gallery 16" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="HABO-NA/assets/img/gallery-people/people2.jpg" title="people2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
@@ -132,9 +217,9 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-17.jpg" class="img-fluid" alt="">
+              <img src="HABO-NA\assets\img\gallery-people\people3.jpg" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-17.jpg" title="Gallery 17" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="HABO-NA\assets\img\gallery-people\people3.jpg" title="people3" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
                 <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
@@ -142,10 +227,12 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-18.jpg" class="img-fluid" alt="">
+              <img src="HABO-NA\assets\img\gallery-people\people4.jpg" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-18.jpg" title="Gallery 18" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="HABO-NA\assets\img\gallery-people\people4.jpg" title="Gallery 18" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>const bsCollapse = new bootstrap.Collapse('#myCollapse', {
+  toggle: false
+})
               </div>
             </div>
           </div><!-- End Gallery Item -->
