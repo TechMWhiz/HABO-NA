@@ -1646,3 +1646,69 @@ section,
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
+
+/*--------------------------------------------------------------
+# Gallery Architectural Section
+--------------------------------------------------------------*/
+.gallery-archi .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-archi .gallery-item img {
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.gallery-archi .gallery-links {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.gallery-archi .gallery-links .preview-link,
+.gallery .gallery-links .details-link {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  line-height: 1.2;
+  margin: 30px 8px 0 8px;
+}
+
+.gallery-archi .gallery-links .preview-link:hover,
+.gallery .gallery-links .details-link:hover {
+  color: #ffffff;
+}
+
+.gallery-archi .gallery-links .details-link {
+  font-size: 30px;
+  line-height: 0;
+}
+
+.gallery-archi .gallery-item:hover .gallery-links {
+  opacity: 1;
+}
+
+.gallery-archi .gallery-item:hover .preview-link,
+.gallery .gallery-item:hover .details-link {
+  margin-top: 0;
+}
+
+.gallery-archi .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.glightbox-clean .gslide-description {
+  background: #272727;
+}
+
+.glightbox-clean .gslide-title {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
