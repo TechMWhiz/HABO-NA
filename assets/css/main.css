@@ -1031,7 +1031,10 @@ section,
 # Gallery Details Section
 --------------------------------------------------------------*/
 .gallery-details .portfolio-details-slider img {
-  width: 100%;
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  display: block;
 }
 
 .gallery-details .swiper-wrapper {
