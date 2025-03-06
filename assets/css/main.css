@@ -1469,6 +1469,8 @@ section,
 }
 
 .gallery-travel .gallery-item img {
+  width: 100%; 
+  height: 360px; 
   transition: 0.3s;
 }
 
