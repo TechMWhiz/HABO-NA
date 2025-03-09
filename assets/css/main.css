@@ -1994,8 +1994,8 @@ section,
 --------------------------------------------------------------*/
 /* for slider img*/
 .gallery-details .portfolio-details-slider img {    
-  width: 55%;
-  height: 550px;
+  width: 40%;
+  height: 430px;
   margin: 0 auto;
   display: block;
 }
