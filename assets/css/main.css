@@ -933,6 +933,25 @@ section,
   line-height: 0;
 }
 
+.about .social-links {
+  padding-left: 50px;
+}
+
+.about .social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0 10px;
+  padding-left: 6px;
+  padding-top: 5px;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 30px;
+}
+
+.about .social-links a:hover {
+  color: var(--accent-color);
+}
+
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
