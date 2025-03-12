@@ -787,16 +787,43 @@ section,
   align-items: center;
 }
 
+/*This the css for the image */
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/*This the css for the text */
 .hero h2 {
+  position: relative;
+  z-index: 1;
   margin: 0 0 10px 0;
   font-size: 38px;
   font-weight: 700;
+  display: inline-block;
 }
 
 .hero h2 .underlight {
   position: relative;
   z-index: 1;
   padding: 0 5px;
+  display: inline-block;
+}
+/*This the css for the text */
+.hero .text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
   display: inline-block;
 }
 
@@ -834,6 +861,8 @@ section,
   transition: 0.5s;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .btn-get-started:hover {
