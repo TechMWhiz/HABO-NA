@@ -987,6 +987,79 @@ section,
   color: var(--accent-color);
 }
 
+.page-title-about {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-about .heading {
+  position: relative;
+  padding: 35px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/* Make text readable against the image */
+.page-title-about .heading h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-about .heading p {
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-about .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-about .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-about nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-about nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-about nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-about nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
 
 /*--------------------------------------------------------------
 # Testimonials Section
