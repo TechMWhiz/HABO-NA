@@ -886,11 +886,11 @@ section,
 }
 
 .gallery-item img {
-  width: 100%; /* Ensures the image fills the container width */
-  height: auto; /* Maintains the aspect ratio */
-  object-fit: cover; /* Crops the image to fit its container */
-  max-height: 200px; /* Adjust based on your preferred height */
-  border-radius: 10px; /* Optional: Adds rounded corners to images */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  max-height: 200px; 
+  border-radius: 10px;
 }
 
 .gallery-main .gallery-item img {
@@ -2712,56 +2712,6 @@ section,
   margin: 0;
 }
 
-/*This the css for the image */
-.page-title img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-/*This the css for the text */
-.page-title .text {
-  position: relative;
-  z-index: 1;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  font-weight: 400;
-  font-size: 20px;
-  letter-spacing: 2px;
-  display: inline-block;
-  font-family: Times New Roman;
-}
-
-/*This the css for the text */
-.page-title h1 {
-  position: relative;
-  z-index: 1;
-  margin: 0 0 10px 0;
-  font-size: 38px;
-  font-weight: 700;
-  display: inline-block;
-}
-
-.page-title .cta-btn {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-weight: 400;
-  font-size: 14px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  z-index: 1;
-}
-
 /*--------------------------------------------------------------
 # FOR ALL PAGE TITLE BACKGROUND
 --------------------------------------------------------------*/
@@ -2853,7 +2803,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# FOR ALL PAGE macro TITLE BACKGROUND
+# FOR ALL PAGE macro TITLE BACKGROUND MAE
 --------------------------------------------------------------*/
 .page-title-macro {
   color: var(--default-color);
@@ -2943,7 +2893,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# FOR ALL PAGE TITLE street-single BACKGROUND
+# FOR ALL PAGE TITLE Tstreet-single BACKGROUND / MAE
 --------------------------------------------------------------*/
 
 .page-title-street {
