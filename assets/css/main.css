@@ -782,7 +782,7 @@ section,
   width: 100%;
   min-height: 30vh;
   position: relative;
-  padding: 120px 0 60px 0;
+  padding: 65px 0 60px 0;
   display: flex;
   align-items: center;
 }
@@ -802,29 +802,34 @@ section,
 .hero h2 {
   position: relative;
   z-index: 1;
-  margin: 0 0 10px 0;
-  font-size: 38px;
+  margin: 0 0 0px 0;
+  font-size: 40px;
   font-weight: 700;
   display: inline-block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero h2 .underlight {
+  font-size: 38px;
   position: relative;
   z-index: 1;
   padding: 0 5px;
   display: inline-block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 /*This the css for the text */
 .hero .text {
   position: relative;
   z-index: 1;
   color: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero h2 .underlight:before {
@@ -839,8 +844,9 @@ section,
 }
 
 .hero p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   font-size: 18px;
 }
 
@@ -856,13 +862,14 @@ section,
   font-weight: 400;
   font-size: 14px;
   display: inline-block;
-  padding: 12px 40px;
+  padding: 12px 30px;
   border-radius: 4px;
   transition: 0.5s;
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
   z-index: 1;
+  margin-top: 0px;
 }
 
 .hero .btn-get-started:hover {
@@ -870,19 +877,22 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Gallery Section
+# Gallery MAIN Section
 --------------------------------------------------------------*/
-.gallery .gallery-item {
+.gallery-main .gallery-item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.gallery .gallery-item img {
+.gallery-main .gallery-item img {
+  width: 100%; 
+  height: 280px; 
+  object-fit: cover;
   transition: 0.3s;
 }
 
-.gallery .gallery-links {
+.gallery-main .gallery-links {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -891,7 +901,7 @@ section,
   z-index: 3;
 }
 
-.gallery .gallery-links .preview-link,
+.gallery-main .gallery-links .preview-link,
 .gallery .gallery-links .details-link {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
@@ -900,26 +910,26 @@ section,
   margin: 30px 8px 0 8px;
 }
 
-.gallery .gallery-links .preview-link:hover,
+.gallery-main .gallery-links .preview-link:hover,
 .gallery .gallery-links .details-link:hover {
   color: #ffffff;
 }
 
-.gallery .gallery-links .details-link {
+.gallery-main .gallery-links .details-link {
   font-size: 30px;
   line-height: 0;
 }
 
-.gallery .gallery-item:hover .gallery-links {
+.gallery-main .gallery-item:hover .gallery-links {
   opacity: 1;
 }
 
-.gallery .gallery-item:hover .preview-link,
+.gallery-main .gallery-item:hover .preview-link,
 .gallery .gallery-item:hover .details-link {
   margin-top: 0;
 }
 
-.gallery .gallery-item:hover img {
+.gallery-main .gallery-item:hover img {
   transform: scale(1.1);
 }
 
@@ -980,6 +990,79 @@ section,
   color: var(--accent-color);
 }
 
+.page-title-about {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-about .heading {
+  position: relative;
+  padding: 35px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/* Make text readable against the image */
+.page-title-about .heading h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-about .heading p {
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-about .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-about .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-about nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-about nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-about nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-about nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1337,6 +1420,70 @@ section,
   border-radius: 0px;
 }
 
+.page-title-service {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-service .heading {
+  position: relative;
+  padding: 80px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.page-title-service .heading p {
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-service .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-service .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-service nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-service nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-service nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-service nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
@@ -1582,7 +1729,95 @@ section,
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
+/*--------------------------------------------------------------
+# Gallery Travel page title Background
+--------------------------------------------------------------*/
+.page-archi-travel {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
 
+.page-archi-travel .heading {
+  position: relative;
+  padding: 80px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/*This the css for the image */
+.page-archi-travel .heading img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+}
+/* Make text readable against the image */
+.page-archi-travel .heading h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.page-archi-travel .heading p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-archi-travel .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-archi-travel .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-archi-travel nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-archi-travel nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-archi-travel nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-archi-travel nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
 /*--------------------------------------------------------------
 # Gallery Sports Section
 --------------------------------------------------------------*/
@@ -1648,6 +1883,96 @@ section,
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
+/*--------------------------------------------------------------
+# Gallery Sports Section BACKGROUND
+--------------------------------------------------------------*/
+.page-title-sports {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-sports .heading {
+  position: relative;
+  padding: 50px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/*This the css for the image */
+.page-title-sports .heading img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+}
+/* Make text readable against the image */
+.page-title-sports .heading h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-sports .heading p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-sports .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-sports .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-sports nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-sports nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-sports nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-sports nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
 
 /*--------------------------------------------------------------
 # Gallery People Section
@@ -1716,6 +2041,97 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Gallery People page Background
+--------------------------------------------------------------*/
+.page-title-people {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-people .heading {
+  position: relative;
+  padding: 96px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/*This the css for the image */
+.page-title-people .heading img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+}
+/* Make text readable against the image */
+.page-title-people .heading h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-people .heading p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-people .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-people .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-people nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-people nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-people nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-people nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+
+/*--------------------------------------------------------------
 # Gallery Architectural Section
 --------------------------------------------------------------*/
 .gallery-archi .gallery-item {
@@ -1779,6 +2195,95 @@ section,
 .glightbox-clean .gslide-title {
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
+}
+/*--------------------------------------------------------------
+# Gallery Architectural page title Background
+--------------------------------------------------------------*/
+.page-title-archi {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-archi .heading {
+  position: relative;
+  padding: 80px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/*This the css for the image */
+.page-title-archi .heading img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+}
+/* Make text readable against the image */
+.page-title-archi .heading h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-archi .heading p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-archi .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-archi .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-archi nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-archi nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-archi nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-archi nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
 /*--------------------------------------------------------------
@@ -1845,6 +2350,95 @@ section,
 .glightbox-clean .gslide-title {
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
+}
+/*--------------------------------------------------------------
+# Gallery wildlife page Background
+--------------------------------------------------------------*/
+.page-title-wildlife {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-wildlife .heading {
+  position: relative;
+  padding: 90px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/*This the css for the image */
+.page-title-wildlife .heading img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+}
+/* Make text readable against the image */
+.page-title-wildlife .heading h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-wildlife .heading p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-wildlife .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-wildlife .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-wildlife nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-wildlife nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-wildlife nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-wildlife nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
 /*--------------------------------------------------------------
@@ -2224,4 +2818,339 @@ section,
   font-style: italic;
   margin: 0 0 15px 0 0 0;
   padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery .gallery-item img {
+  transition: 0.3s;
+}
+
+.gallery .gallery-links {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.gallery .gallery-links .preview-link,
+.gallery .gallery-links .details-link {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  line-height: 1.2;
+  margin: 30px 8px 0 8px;
+}
+
+.gallery .gallery-links .preview-link:hover,
+.gallery .gallery-links .details-link:hover {
+  color: #ffffff;
+}
+
+.gallery .gallery-links .details-link {
+  font-size: 30px;
+  line-height: 0;
+}
+
+.gallery .gallery-item:hover .gallery-links {
+  opacity: 1;
+}
+
+.gallery .gallery-item:hover .preview-link,
+.gallery .gallery-item:hover .details-link {
+  margin-top: 0;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.glightbox-clean .gslide-description {
+  background: #272727;
+}
+
+.glightbox-clean .gslide-title {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# FOR ALL PAGE TITLE BACKGROUND
+--------------------------------------------------------------*/
+.page-title-ALL {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-ALL .heading {
+  position: relative;
+  padding: 70px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/*This the css for the image */
+.page-title-ALL .heading img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+}
+/* Make text readable against the image */
+.page-title-ALL .heading h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-ALL .heading p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-ALL .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-ALL .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-ALL nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-ALL nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-ALL nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-ALL nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/*--------------------------------------------------------------
+# FOR ALL PAGE macro TITLE BACKGROUND MAE
+--------------------------------------------------------------*/
+.page-title-macro {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-macro .heading {
+  position: relative;
+  padding: 110px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/*This the css for the image */
+.page-title-macro .heading img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+}
+/* Make text readable against the image */
+.page-title-macro .heading h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-macro .heading p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-macro .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-macro .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-macro nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-macro nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-macro nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-macro nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/*--------------------------------------------------------------
+# FOR ALL PAGE TITLE Tstreet-single BACKGROUND / MAE
+--------------------------------------------------------------*/
+
+.page-title-street {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.page-title-street .heading {
+  position: relative;
+  padding: 96px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/*This the css for the image */
+.page-title-street .heading img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+}
+/* Make text readable against the image */
+.page-title-street .heading h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-street .heading p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-street .heading .cta-btn {
+  color: var(--default-color);
+  background: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title-street .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.page-title-street nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title-street nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page-title-street nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title-street nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
